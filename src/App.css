@@ -1,32 +1,31 @@
 /* Estilos para dispositivos móveis */
 @media only screen and (max-width: 600px) {
   body {
-    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
     font-family: Arial, sans-serif; /* Define a fonte para todo o documento */
     background-color: #f7f7f7; /* Cor de fundo do corpo */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove padding */
   }
 
   .pedido-container {
     text-align: center;
-    width: 100%; /* Define a largura total para ocupar toda a largura da tela */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
     padding: 20px; /* Adiciona espaço interno ao redor do contêiner */
   }
 
   h1 {
     color: #ff7f00; /* Laranja */
+    font-size: 24px; /* Tamanho da fonte */
     margin-bottom: 20px; /* Adiciona espaço abaixo do título */
   }
 
   input[type="text"],
   input[type="number"],
   select {
+    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    border: 1px solid #ccc;
     width: calc(100% - 20px); /* Ajusta a largura para compensar o padding */
     margin-bottom: 15px; /* Adiciona espaço entre os elementos */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
     font-size: 16px; /* Define o tamanho da fonte */
   }
 
@@ -46,7 +45,6 @@
     cursor: pointer;
     transition: background-color 0.3s;
     width: 100%; /* Define a largura total */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
     font-size: 18px; /* Define o tamanho da fonte */
   }
 
@@ -62,6 +60,7 @@
     margin-bottom: 15px; /* Adiciona espaço abaixo das opções */
     cursor: pointer;
     font-size: 18px; /* Define o tamanho da fonte */
+    text-align: left; /* Alinha o texto à esquerda */
   }
 
   .forma-pagamento input[type="radio"] {
