@@ -1,61 +1,68 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+  }
+
+  .pedido-container {
+    text-align: center;
+    width: 100%; /* Define a largura total para ocupar toda a largura da tela */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="radio"],
+  input[type="submit"],
+  select {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: calc(100% - 20px); /* Ajusta a largura para compensar o padding */
+    margin-bottom: 15px; /* Aumenta o espaço entre os elementos */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="submit"]:focus,
+  select:focus {
+    outline: none;
+    border-color: #ff7f00; /* Laranja */
+  }
+
+  .enviar-pedido {
+    background-color: #ff7f00; /* Laranja */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: calc(100% - 20px); /* Ajusta a largura para compensar o padding */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+  }
+
+  .enviar-pedido:hover {
+    background-color: #e65c00; /* Laranja mais escuro */
+  }
 }
 
-.pedido-container {
-  text-align: center;
-  width: 90%; /* Reduz a largura para telas menores */
-  max-width: 400px; /* Define uma largura máxima para evitar que o conteúdo se estenda demais */
-}
+/* Estilos para dispositivos maiores */
+@media only screen and (min-width: 601px) {
+  .pedido-container {
+    text-align: center;
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    width: 80%; /* Define a largura do contêiner */
+    max-width: 600px; /* Define a largura máxima */
+  }
 
-h1 {
-  font-family: Arial, sans-serif;
-  color: #ff7f00; /* Laranja */
-}
+  h1 {
+    font-family: Arial, sans-serif;
+    color: #ff7f00; /* Laranja */
+  }
 
-form {
-  text-align: left;
-}
-
-/* Inputs arredondados */
-input[type="text"],
-input[type="number"],
-input[type="radio"],
-input[type="submit"],
-select {
-  border-radius: 5px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-  width: 100%; /* Faz com que os inputs ocupem toda a largura disponível */
-  box-sizing: border-box; /* Inclui padding e border na largura total */
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-input[type="submit"]:focus,
-select:focus {
-  outline: none;
-  border-color: #ff7f00; /* Laranja */
-}
-
-/* Botão de envio */
-.enviar-pedido {
-  background-color: #ff7f00; /* Laranja */
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 100%; /* Faz com que o botão ocupe toda a largura disponível */
-  box-sizing: border-box; /* Inclui padding e border na largura total */
-}
-
-.enviar-pedido:hover {
-  background-color: #e65c00; /* Laranja mais escuro */
+  form {
+    text-align: left;
+  }
 }
