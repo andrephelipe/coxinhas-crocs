@@ -8,7 +8,8 @@ body {
 
 .pedido-container {
   text-align: center;
-  width: 80%; /* Ajuste a largura conforme necessário */
+  width: 90%; /* Reduz a largura para telas menores */
+  max-width: 400px; /* Define uma largura máxima para evitar que o conteúdo se estenda demais */
 }
 
 h1 {
@@ -30,6 +31,8 @@ select {
   padding: 8px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
+  width: 100%; /* Faz com que os inputs ocupem toda a largura disponível */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
 input[type="text"]:focus,
@@ -49,6 +52,8 @@ select:focus {
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 100%; /* Faz com que o botão ocupe toda a largura disponível */
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
 .enviar-pedido:hover {
