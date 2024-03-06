@@ -2,30 +2,36 @@
 @media only screen and (max-width: 600px) {
   body {
     overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+    font-family: Arial, sans-serif; /* Define a fonte para todo o documento */
+    background-color: #f7f7f7; /* Cor de fundo do corpo */
   }
 
   .pedido-container {
     text-align: center;
     width: 100%; /* Define a largura total para ocupar toda a largura da tela */
     box-sizing: border-box; /* Inclui padding e border na largura total */
+    padding: 20px; /* Adiciona espaço interno ao redor do contêiner */
+  }
+
+  h1 {
+    color: #ff7f00; /* Laranja */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
   }
 
   input[type="text"],
   input[type="number"],
-  input[type="radio"],
-  input[type="submit"],
   select {
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     width: calc(100% - 20px); /* Ajusta a largura para compensar o padding */
-    margin-bottom: 15px; /* Aumenta o espaço entre os elementos */
+    margin-bottom: 15px; /* Adiciona espaço entre os elementos */
     box-sizing: border-box; /* Inclui padding e border na largura total */
+    font-size: 16px; /* Define o tamanho da fonte */
   }
 
   input[type="text"]:focus,
   input[type="number"]:focus,
-  input[type="submit"]:focus,
   select:focus {
     outline: none;
     border-color: #ff7f00; /* Laranja */
@@ -36,11 +42,12 @@
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 12px 24px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: calc(100% - 20px); /* Ajusta a largura para compensar o padding */
+    width: 100%; /* Define a largura total */
     box-sizing: border-box; /* Inclui padding e border na largura total */
+    font-size: 18px; /* Define o tamanho da fonte */
   }
 
   .enviar-pedido:hover {
@@ -52,9 +59,9 @@
     display: block;
     position: relative;
     padding-left: 35px;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Adiciona espaço abaixo das opções */
     cursor: pointer;
-    font-size: 18px;
+    font-size: 18px; /* Define o tamanho da fonte */
   }
 
   .forma-pagamento input[type="radio"] {
@@ -104,24 +111,5 @@
     border-radius: 50%;
     background: #ff7f00; /* Laranja */
     transform: translate(-50%, -50%);
-  }
-}
-
-/* Estilos para dispositivos maiores */
-@media only screen and (min-width: 601px) {
-  .pedido-container {
-    text-align: center;
-    margin: 0 auto; /* Centraliza o contêiner na página */
-    width: 80%; /* Define a largura do contêiner */
-    max-width: 600px; /* Define a largura máxima */
-  }
-
-  h1 {
-    font-family: Arial, sans-serif;
-    color: #ff7f00; /* Laranja */
-  }
-
-  form {
-    text-align: left;
   }
 }
