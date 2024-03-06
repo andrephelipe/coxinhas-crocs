@@ -19,6 +19,22 @@
     margin-bottom: 15px;
   }
 
+  fieldset {
+    border: none;
+    margin-bottom: 20px; /* Adiciona espaço entre os campos */
+  }
+
+  legend {
+    color: #ffffff; /* Laranja para o título */
+    font-size: 20px; /* Tamanho do título */
+    font-weight: bold; /* Deixa o título em negrito */
+    margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+    border-bottom: 2px solid #ff7f00; /* Adiciona uma linha de destaque */
+    padding-bottom: 5px; /* Adiciona espaço entre a linha de destaque e o texto */
+    width: 100%; /* Garante que a largura do legend seja 100% do seu container */
+    text-align: left; /* Alinha o texto do título à esquerda */
+  }
+
   input[type="text"],
   input[type="number"],
   select {
@@ -53,5 +69,12 @@
 
   .enviar-pedido:hover {
     background-color: #e65c00; /* Laranja mais escuro ao passar o mouse */
+  }
+
+  /* Estilizando as formas de pagamento */
+  .forma-pagamento {
+    display: flex;
+    flex-direction: column; /* Organiza as formas de pagamento em colunas */
+    align-items: center; /* Centraliza as formas de pagamento */
   }
 }
