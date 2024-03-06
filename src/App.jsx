@@ -64,11 +64,11 @@ function PedidoPage() {
   };
 
   return (
-    <div>
+    <div className="pedido-container">
       <h1>Faça seu Pedido</h1>
       <form onSubmit={handleSubmit}>
         {/* Pacote de Salgados */}
-        <fieldset>
+        <fieldset className="pacote">
           <legend>Escolha o Pacote</legend>
           <select value={pacote} onChange={handleChangePacote}>
             <option value="">Selecione</option>
@@ -91,38 +91,38 @@ function PedidoPage() {
 
         {/* Quantidade de Salgados */}
         {pacote && (
-          <fieldset>
+          <fieldset className="quantidade">
             <legend>Escolha a Quantidade de Salgados</legend>
-            <div>
+            <div className="salgado">
               <label>Coxinha</label>
-              <input type="number" min="0" value={quantidade[pacote].coxinha} onChange={(e) => handleChangeQuantidade(e, 'coxinha')} />
+              <input type="number" min="0" value={quantidade[pacote].coxinha === 0 ? '' : quantidade[pacote].coxinha} onChange={(e) => handleChangeQuantidade(e, 'coxinha')} />
             </div>
             <div>
               <label>Bolinho de Queijo</label>
-              <input type="number" min="0" value={quantidade[pacote].bolinhoQueijo} onChange={(e) => handleChangeQuantidade(e, 'bolinhoQueijo')} />
+              <input type="number" min="0" value={quantidade[pacote].bolinhoQueijo === 0 ? '' : quantidade[pacote].bolinhoQueijo} onChange={(e) => handleChangeQuantidade(e, 'bolinhoQueijo')} />
             </div>
             <div>
               <label>Calabresa com Queijo</label>
-              <input type="number" min="0" value={quantidade[pacote].calabresaQueijo} onChange={(e) => handleChangeQuantidade(e, 'calabresaQueijo')} />
+              <input type="number" min="0" value={quantidade[pacote].calabresaQueijo === 0 ? '' : quantidade[pacote].calabresaQueijo} onChange={(e) => handleChangeQuantidade(e, 'calabresaQueijo')} />
             </div>
             <div>
               <label>Presunto com Queijo</label>
-              <input type="number" min="0" value={quantidade[pacote].presuntoQueijo} onChange={(e) => handleChangeQuantidade(e, 'presuntoQueijo')} />
+              <input type="number" min="0" value={quantidade[pacote].presuntoQueijo === 0 ? '' : quantidade[pacote].presuntoQueijo} onChange={(e) => handleChangeQuantidade(e, 'presuntoQueijo')} />
             </div>
             <div>
               <label>Kibe Tradicional</label>
-              <input type="number" min="0" value={quantidade[pacote].kibeTradicional} onChange={(e) => handleChangeQuantidade(e, 'kibeTradicional')} />
+              <input type="number" min="0" value={quantidade[pacote].kibeTradicional === 0 ? '' : quantidade[pacote].kibeTradicional} onChange={(e) => handleChangeQuantidade(e, 'kibeTradicional')} />
             </div>
             <div>
               <label>Risoles de Carne</label>
-              <input type="number" min="0" value={quantidade[pacote].risolesCarne} onChange={(e) => handleChangeQuantidade(e, 'risolesCarne')} />
+              <input type="number" min="0" value={quantidade[pacote].risolesCarne === 0 ? '' : quantidade[pacote].risolesCarne} onChange={(e) => handleChangeQuantidade(e, 'risolesCarne')} />
             </div>
           </fieldset>
         )}
 
         {/* Informações do Cliente */}
         {pacote && (
-          <fieldset>
+          <fieldset className="informacoes-cliente">
             <legend>Informações do Cliente</legend>
             <div>
               <label htmlFor="nome">Nome:</label>
@@ -149,7 +149,7 @@ function PedidoPage() {
 
         {/* Forma de Pagamento */}
         {pacote && (
-          <fieldset>
+          <fieldset className="forma-pagamento">
             <legend>Forma de Pagamento</legend>
             <label>
               <input type="radio" name="formaPagamento" value="pix" checked={formaPagamento === 'pix'} onChange={() => setFormaPagamento('pix')} />
@@ -178,7 +178,7 @@ function PedidoPage() {
 
         {/* Botão de Envio */}
         {pacote && (
-          <button type="submit">Enviar Pedido</button>
+          <button type="submit" className="enviar-pedido">Enviar Pedido</button>
         )}
       </form>
     </div>

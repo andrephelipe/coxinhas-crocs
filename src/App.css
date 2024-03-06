@@ -1,6 +1,4 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f8f9fa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,94 +6,51 @@ body {
   margin: 0;
 }
 
-.container {
-  max-width: 400px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+.pedido-container {
+  text-align: center;
+  width: 80%; /* Ajuste a largura conforme necessário */
 }
 
 h1 {
-  text-align: center;
-  font-family: 'Kaushan Script', cursive;
-  color: #e8491d;
+  font-family: Arial, sans-serif;
+  color: #ff7f00; /* Laranja */
 }
 
 form {
-  margin-top: 20px;
+  text-align: left;
 }
 
-fieldset {
-  border: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-legend {
-  font-weight: bold;
-  font-size: 18px;
-  color: #e8491d;
+/* Inputs arredondados */
+input[type="text"],
+input[type="number"],
+input[type="radio"],
+input[type="submit"],
+select {
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
   margin-bottom: 10px;
 }
 
-select,
-input[type="text"],
-input[type="number"],
-button[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  box-sizing: border-box;
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="submit"]:focus,
+select:focus {
+  outline: none;
+  border-color: #ff7f00; /* Laranja */
 }
 
-select {
-  background-color: #f8f9fa;
-}
-
-button[type="submit"] {
-  background-color: #e8491d;
-  border: none;
+/* Botão de envio */
+.enviar-pedido {
+  background-color: #ff7f00; /* Laranja */
   color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
-  background-color: #d2320c;
-}
-
-label {
-  font-weight: bold;
-  font-size: 16px;
-  color: #333;
-}
-
-.radio-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.radio-group label {
-  display: inline;
-}
-
-.radio-group input[type="radio"] {
-  margin-right: 5px;
-}
-
-.link-whatsapp {
-  text-align: center;
-}
-
-.link-whatsapp a {
-  color: #e8491d;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.link-whatsapp a:hover {
-  text-decoration: underline;
+.enviar-pedido:hover {
+  background-color: #e65c00; /* Laranja mais escuro */
 }
